@@ -2,18 +2,13 @@ package com.example.weatherapiproject.service;
 
 import com.example.weatherapiproject.model.Weather;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.json.JSONArray;
-import org.json.JSONObject;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.Iterator;
-import java.util.List;
-import java.util.Objects;
 
 @Service
 public class WeatherService {
@@ -23,7 +18,7 @@ public class WeatherService {
         String fooPlaceInTheMap
                 = "https://api.openweathermap.org/data/3.0/" +
                 "onecall?lat=45.4781435610314&lon=-75.70370247743809&units=metric&exclude=hourly,daily&lang=ru" +
-                "&appid=03eac6778286898f5f733e498b63801d";
+                "&appid=********************************";
         ResponseEntity<String> responseForWeather
                 = currentWeather.getForEntity(fooPlaceInTheMap, String.class);
 
@@ -37,7 +32,7 @@ public class WeatherService {
         String fooWeather
                 = "https://maps.googleapis.com/maps/api/" +
                 "geocode/json?latlng=45.4781435610314,-75.70370247743809" +
-                "&key=AIzaSyBSBnmfLtZcqKQPybREkz_-p8F4R_HzIiE";
+                "&key=********************************";
         ResponseEntity<String> responseForPlaceInTheMap
                 = currentPlaceInTheMap.getForEntity(fooWeather, String.class);
 
